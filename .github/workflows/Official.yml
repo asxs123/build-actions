@@ -133,7 +133,7 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}
         bash <(curl -fsSL https://raw.githubusercontent.com/281677160/common/main/custom/first.sh)
-        sed -i 's#https://github.com/openwrt/openwrt#https://github.com/istoreos/istoreos#g' build/common
+        sed -i 's#https://github.com/openwrt/openwrt#https://github.com/istoreos/istoreos#g' build/common/common.sh
         source ${GITHUB_WORKSPACE}/build/${{ env.FOLDER_NAME }}/settings.ini
         export INPUTS_REPO_BRANCH="${{ github.event.inputs.REPO_BRANCH }}"
         export INPUTS_CONFIG_FILE="${{ github.event.inputs.CONFIG_FILE }}"
